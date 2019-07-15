@@ -21,7 +21,9 @@ export class HomePage {
 
     console.log('ตัวตั้ง',first,'ตัวบวก',second);
 
-    this.http.post('https://nextflow-node-calculator-api.azurewebsites.net/Calculator/plus',{
+    let url = 'https://nextflow-node-calculator-api.azurewebsites.net/Calculator/plus';
+
+    this.http.post(url,{
       "first":  first,
       "second":  second,
       }).toPromise();
