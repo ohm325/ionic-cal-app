@@ -10,18 +10,18 @@
   <div class="ion-padding">
 
     <ion-item>
-      <ion-label>ตัวตั้ง</ion-label>
+      <ion-label position="stacked">ตัวตั้ง</ion-label>
       <ion-input [(ngModel)]="first"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>ตัวบวก</ion-label>
+      <ion-label position="stacked">ตัวบวก</ion-label>
       <ion-input [(ngModel)]="second"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>ผลลัพธ์</ion-label>
+      <ion-label position="stacked">ผลลัพธ์</ion-label>
       <ion-input> {{result}}</ion-input>
     </ion-item>
-    <ion-button (click)="calculate(first,second)">
+    <ion-button expand="block" (click)="calculate(first,second)">
       คำนวณ
     </ion-button>
   </div>
