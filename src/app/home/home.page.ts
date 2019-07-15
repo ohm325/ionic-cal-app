@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,26 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  public ans = [];
+  public first:number;
+  public second:number;
+
+  constructor(
+    private http : HttpClient
+  ) {}
+
+  
+  calculate(first,second){
+
+    console.log('ตัวตั้ง',first,'ตัวบวก',second);
+
+    this.http.post('https://nextflow-node-calculator-api.azurewebsites.net/Calculator/plus',{
+      "first":  first,
+      "second":  second,
+      }).toPromise();
+
+    //this.ans = response.results;
+
+  }
 
 }

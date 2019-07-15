@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      หน้าบวก
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+    <ion-item>
+      <ion-label>ตัวตั้ง</ion-label>
+      <ion-input [(ngModel)]="first"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>ตัวบวก</ion-label>
+      <ion-input [(ngModel)]="second"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>ผลลัพธ์</ion-label>
+      <ion-input> {{result}}</ion-input>
+    </ion-item>
+    <ion-button (click)="calculate(first,second)">
+      คำนวณ
+    </ion-button>
   </div>
 </ion-content>
